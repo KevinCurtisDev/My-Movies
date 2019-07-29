@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+    {% block body %}
+        <h1>Login</h1>
+        <form class="login__form">
+            <input type="email" placeholder="Your email..." name="email" class="login__form-input" required>
+            <input type="password" placeholder="password" name="password" class="login__form-input" required>
+            <input type="submit" class="login__form-button" value="Sign in">
+        </form>
+    {% endblock %}

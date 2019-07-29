@@ -1,0 +1,93 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-wrap: no-wrap;
+    background: rgb(27, 26, 26);
+    padding: 20px;
+}
+
+nav .title {
+    color: rgb(212, 190, 62);
+    width: calc(50% - 40px);
+}
+
+nav .log {
+    width: calc(50% - 40px);
+    text-align: right;
+}
+
+.index-main {
+    background-image: url("../images/movie.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+
+.notfound-main {
+    text-align: center;
+}
+
+/************ REGISTRATION ***************/
+.register__form {
+    max-width: 90%;
+    width: 500px;
+    padding: 20px;
+    margin: 10% auto;
+    box-shadow: 2px 2px 10px rgb(88, 88, 88);
+}
+
+.register__form-input {
+    padding: 5px;
+    width: 100%;
+    margin: 15px 0;
+    display: block;
+}
+
+.register__form-button {
+    background-color: rgb(41, 41, 151);
+    color: rgb(255, 255, 240);
+    border-radius: 3px;
+    border: none;
+    padding: 10px;
+    width: 200px;
+}
+
+
+/*************** LOGIN ********************/
+
+.login__form {
+    max-width: 90%;
+    width: 500px;
+    padding: 20px;
+    margin: 10% auto;
+    box-shadow: 2px 2px 10px rgb(88, 88, 88);
+}
+
+.login__form-input {
+    padding: 5px;
+    width: 100%;
+    margin: 15px 0;
+    display: block;
+}
+
+.login__form-button {
+    background-color: rgb(41, 41, 151);
+    color: rgb(255, 255, 240);
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    width: 200px;
+}
+
+/************** FOOTER *******************/
+footer {
+    background: rgb(27, 26, 17);
+    color: rgb(243, 243, 227);
+    padding: 30px;
+    text-align: center;
+}
