@@ -22,10 +22,13 @@ nav .log {
 }
 
 .index-main {
+    width: 100%;
+    height: 800px;
     background-image: url("../images/movie.jpg");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 300px 100px;
+    background-size: cover;
+    padding: 20px;
 }
 
 .notfound-main {
