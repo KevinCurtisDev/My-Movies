@@ -11,6 +11,6 @@ def index():
 def login():
     return render_template('login.html')
 
-@main.errorhandler(404)
+@main.app_errorhandler(404)
 def page_not_found(e):
-    return render_template('notfound.html')
+    return render_template('notfound.html'), 404
