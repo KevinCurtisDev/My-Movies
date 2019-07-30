@@ -5,13 +5,9 @@
             {{ form.hidden_tag() }}
                 {{ form.name }}
                 {{ form.email }}
+                {{ form.password }}
+                {{ form.confirm }}
 
                 {{ form.submit }}
         </form>
-
-        {% if (name) and (email) %}
-            <p>Hello {{ name }}</p>
-            <p>The email we have for you is {{ email }}</p>
-        {% endif %}
-
     {% endblock %}
