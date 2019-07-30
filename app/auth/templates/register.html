@@ -3,19 +3,15 @@
         <h1>Register</h1>
         <form action="/register" method="Post" class="register__form">
             {{ form.hidden_tag() }}
-
-            <div class="">
-                {{ form.name.label }}
                 {{ form.name }}
-            </div>
-
-            <div class="">
-                {{ form.email.label }}
                 {{ form.email }}
-            </div>
 
-            <div class="">
                 {{ form.submit }}
-            </div>
         </form>
+
+        {% if (name) and (email) %}
+            <p>Hello {{ name }}</p>
+            <p>The email we have for you is {{ email }}</p>
+        {% endif %}
+
     {% endblock %}

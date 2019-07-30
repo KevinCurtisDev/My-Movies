@@ -3,7 +3,13 @@ from app.auth.forms import RegistrationForm
 from app.auth import authentication as at
 
 
-@at.route('/register')
+@at.route('/register', methods = ['GET', 'POST'])
 def register_user():
+    name = None
+    email = None
     form = RegistrationForm()
-    return render_template('register.html', form=form)
+    if request.method == 'POST':
+        name = form.name.data
+        email = form.email.data
+
+    return render_template('register.html', form=form, name=name, email=email)
