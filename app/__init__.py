@@ -18,4 +18,7 @@ def create_app(config_type):
     from app.movies import main 
     app.register_blueprint(main) 
 
+    from app.auth import authentication
+    app.register_blueprint(authentication)
+    
     return app
