@@ -1,4 +1,5 @@
 from flask import render_template, flash, redirect, url_for
+from flask_login import login_user, logout_user
 from app.auth.forms import RegistrationForm
 from app.auth import authentication as at
 from app.auth.models import User
@@ -20,4 +21,15 @@ def register_user():
 
 @at.route('/login', methods=['GET', 'POST'])
 def signin_user():
+
+    form = LoginForm()
+    if form.validate_submit():
+        user = User.query.filter_by(user_email=form.email.data).first()
+        if not user or not user.check_password(form.password.data):
+            flash('Invalid login, try again')
+            return redirect(url_for('authentication.signin_user'))
+
+        login_user(user, form.stay_loggedin.data)
+        return redirect(url_for('main.show_movies'))
+        
     return render_template('login.html')
