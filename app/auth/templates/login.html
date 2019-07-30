@@ -1,9 +1,11 @@
 {% extends 'base.html' %}
     {% block body %}
         <h1>Login</h1>
-        <form class="login__form">
-            <input type="email" placeholder="Your email..." name="email" class="login__form-input" required>
-            <input type="password" placeholder="password" name="password" class="login__form-input" required>
-            <input type="submit" class="login__form-button" value="Sign in">
+        <form action="/login" method="Post" class="login__form">
+            {{ login_form.hidden_tag() }}
+            {{ login_form.email }}
+            {{ login_form.password }}
+            {{ login_form.stay_loggedin }}
+            {{ login_form.submit }}
         </form>
     {% endblock %}

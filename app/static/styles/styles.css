@@ -12,13 +12,42 @@ nav {
 }
 
 nav .title {
+    width: calc(50% - 40px); 
+}
+
+.title-text {
     color: rgb(212, 190, 62);
-    width: calc(50% - 40px);
+    text-decoration: none;
+    font-size: 3rem;
+}
+
+nav p {
+    margin: 10px;
+    color: white;
 }
 
 nav .log {
     width: calc(50% - 40px);
     text-align: right;
+    height: 100%;
+    padding: 20px 0;
+}
+
+.login-out {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.register {
+    background-color: rgb(218, 186, 5);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 200px;
+    margin: 0 20px;
 }
 
 .index-main {
