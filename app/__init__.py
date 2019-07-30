@@ -15,7 +15,7 @@ def create_app(config_type):
 
     db.init_app(app)
 
-    from app.movies import main #import blueprint
-    app.register_blueprint(main) #register blueprint
+    from app.movies import main 
+    app.register_blueprint(main) 
 
     return app
